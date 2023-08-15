@@ -3,17 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto 1</title>
-    <link rel = "stylesheet" href = "style.css">
+
+    <title>Consultas Médicas</title>
 </head>
 <body background=" https://clinicanasnuvens.com.br/blog/wp-content/uploads/2016/01/por-que-voce-deve-trocar-seu-sistema-para-consultorio-medico-e1451991474554.jpg">
-    <h1> Consultas já <p>
-        Agende sua consulta conosco
-    </p>
+    <header>
+        <h1>Agendamento de Consultas Médicas</h1>
+    </header>
+    <container>
+        <div class="mensagem">
+            <h2>Bem-vindo ao sistema de agendamento de consultas médicas</h2>
+            <p>Utilize as opções abaixo para agendar, ver ou cancelar suas consultas, verificar convênio e entrar em contato conosco.</p>
+        </div>
 
+        <div class="mensagem">
+            <h2>Agendar Consulta</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-    </h1>
-    
-    
+                <label for="data">Data da Consulta:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="especialidade">Especialidade:</label>
+                <select id="especialidade" name="especialidade" required>
+                    <option value="">Selecione uma especialidade</option>
+                    <option value="clinico">Clínico Geral</option>
+                    <option value="pediatra">Pediatra</option>
+                    <option value="dermatologista">Dermatologista</option>
+                    <option value="oftalmologista">Oftalmologista</option>
+                </select>
+
+                <input type="submit" value="Agendar Consulta">
+            </form>
+        </div>
+
+        <div class="mensagem">
+            <h2>Consultas Agendadas</h2>
+            <div class="consulta">
+                <h3>Consulta com Clínico Geral</h3>
+                <p>Data: 10/08/2023</p>
+                <p>Horário: 15:30</p>
+                <button>Cancelar Consulta</button>
+            </div>
+            <div class="consulta">
+                <h3>Consulta com Dermatologista</h3>
+                <p>Data: 12/08/2023</p>
+                <p>Horário: 09:45</p>
+                <button>Cancelar Consulta</button>
+            </div>
+        </div>
+
+        <div class="mensagem">
+            <h2>Verificar Convênio</h2>
+            <form>
+                <label for="numero_convenio">Número do Convênio:</label>
+                <input type="text" id="numero_convenio" name="numero_convenio" required>
+                <input type="submit" value="Verificar Convênio">
+            </form>
+        </div>
+
+        <div class="mensagem">
+            <h2>Fale Conosco</h2>
+            <form>
+                <label for="nome_contato">Seu Nome:</label>
+                <input type="text" id="nome_contato" name="nome_contato" required>
+
+                <label for="email_contato">Seu E-mail:</label>
+                <input type="email" id="email_contato" name="email_contato" required>
+
+                <label for="mensagem_contato">Mensagem:</label>
+                <textarea id="mensagem_contato" name="mensagem_contato" rows="4" required></textarea>
+
+                <input type="submit" value="Enviar Mensagem">
+            </form>
+        </div>
+    </container>
 </body>
 </html>
